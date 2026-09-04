@@ -6,13 +6,13 @@ import gsap from 'gsap';
 import { FloatingBooks } from '../components/ThreeScene/FloatingBooks';
 import { TributeMarquee } from '../components/TributeMarquee';
 import { MuraliQuiz } from '../components/MuraliQuiz';
-import { teachers } from '../data/teachers';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Murali: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const data = teachers.find(t => t.id === 'murali');
+  
 
   useEffect(() => {
     const ctx = gsap.context(() => {

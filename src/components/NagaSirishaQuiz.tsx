@@ -137,7 +137,7 @@ export const NagaSirishaQuiz: React.FC = () => {
       });
     }
 
-    let animationFrameId: number;
+    
     let startTime = Date.now();
 
     const render = () => {
@@ -158,7 +158,7 @@ export const NagaSirishaQuiz: React.FC = () => {
       });
 
       if (elapsed < 6000) {
-        animationFrameId = requestAnimationFrame(render);
+        requestAnimationFrame(render);
       } else {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
       }

@@ -6,13 +6,13 @@ import gsap from 'gsap';
 import { AINetwork } from '../components/ThreeScene/AINetwork';
 import { TributeMarquee } from '../components/TributeMarquee';
 import { AnjaliQuiz } from '../components/AnjaliQuiz';
-import { teachers } from '../data/teachers';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Anjali: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const data = teachers.find(t => t.id === 'anjali');
+  
 
   useEffect(() => {
     const ctx = gsap.context(() => {

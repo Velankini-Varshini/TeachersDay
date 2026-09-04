@@ -1,5 +1,47 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'zentry';
+  src: url('/fonts/zentry-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'circular-web';
+  src: url('/fonts/circularweb-book.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robert-regular';
+  src: url('/fonts/robert-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'robert-medium';
+  src: url('/fonts/robert-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'general';
+  src: url('/fonts/general.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NCLGasdrifo';
+  src: url('/fonts/NCLGasdrifo-Demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   body {
     @apply bg-zinc-950 text-white font-sans overflow-x-hidden;
@@ -37,5 +79,24 @@
   @keyframes marquee {
     0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); } /* Scrolls exactly half the width of the duplicated content */
+  }
+
+  .font-zentry {
+    font-family: 'zentry', sans-serif;
+  }
+  .font-circular-web {
+    font-family: 'circular-web', sans-serif;
+  }
+  .font-robert-regular {
+    font-family: 'robert-regular', sans-serif;
+  }
+  .font-robert-medium {
+    font-family: 'robert-medium', sans-serif;
+  }
+  .font-general {
+    font-family: 'general', sans-serif;
+  }
+  .font-ncl-gasdrifo {
+    font-family: 'NCLGasdrifo', sans-serif;
   }
 }
