@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import { FloatingBooks } from '../components/ThreeScene/FloatingBooks';
 import { TributeMarquee } from '../components/TributeMarquee';
+import { MuraliQuiz } from '../components/MuraliQuiz';
 import { teachers } from '../data/teachers';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -55,7 +56,7 @@ const Murali: React.FC = () => {
 
       {/* Navigation */}
       <nav className="fixed top-0 w-full p-6 flex justify-between z-50 text-sm tracking-widest font-sans">
-        <div className="text-[#d4af37]/80">TD 2026</div>
+        <div className="text-[#d4af37]/80 font-bold">TD 2026</div>
         <Link to="/" className="hover:text-[#d4af37] transition-colors uppercase">← Return to Hub</Link>
       </nav>
 
@@ -64,71 +65,66 @@ const Murali: React.FC = () => {
         
         {/* Hero Section */}
         <section className="min-h-screen flex flex-col justify-center items-center px-6 text-center">
-          <p className="hero-text text-[#d4af37] tracking-widest uppercase text-sm mb-6 opacity-90">The Gentle Mentor</p>
-          <h1 className="hero-text text-6xl md:text-8xl font-bold mb-10 text-[#fafaf9] tracking-wide font-sans">
-            {data?.fullName}
+          <h2 className="hero-text text-3xl md:text-5xl font-bold text-[#d4af37] tracking-widest uppercase mb-6 font-sans">
+            Mr. P. Murali Sir
+          </h2>
+          <h1 className="hero-text text-5xl md:text-7xl lg:text-8xl font-bold mb-10 text-[#fafaf9] tracking-wide max-w-5xl leading-tight">
+            “The One Who Taught Us to Think Beyond the Surface”
           </h1>
-          <p className="hero-text text-2xl md:text-4xl italic text-[#d6d3d1] max-w-3xl leading-relaxed">
-            "Some teachers teach the lesson.<br />Some understand the person learning it."
+          <p className="hero-text text-xl md:text-3xl italic text-[#d6d3d1] max-w-3xl leading-relaxed border-t border-b border-[#d4af37]/30 py-6">
+            “You didn’t just teach us Deep Learning…
+            <br className="hidden md:inline" />
+            you taught us that every complex problem has a pattern waiting to be discovered.”
           </p>
         </section>
 
-        {/* The Little Things */}
+        {/* Short Appreciation Message */}
         <section className="scroll-section min-h-screen flex items-center justify-center px-6 py-20">
-          <div className="max-w-4xl mx-auto bg-[#292524]/40 backdrop-blur-md border border-[#44403c]/50 p-12 md:p-16 rounded-2xl shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-30"></div>
-            <h2 className="text-4xl md:text-5xl text-[#d4af37] mb-10 font-bold">The Little Things</h2>
+          <div className="max-w-4xl mx-auto bg-[#292524]/50 backdrop-blur-md border border-[#d4af37]/30 p-10 md:p-16 rounded-3xl shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-60"></div>
+            
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37] text-xs font-sans tracking-widest uppercase mb-8">
+              <span>🧠 Appreciation</span>
+            </div>
+
+            <h2 className="text-3xl md:text-5xl text-[#d4af37] mb-10 font-bold">
+              Training Our Minds Beyond Algorithms
+            </h2>
+            
             <div className="space-y-8 text-xl md:text-2xl leading-relaxed text-[#d6d3d1] font-light">
-              <p>{data?.placeholders.message}</p>
-              <p>It was never just about academics. It was your patience when we made mistakes, your gentle guidance when we were lost, and the comfort of knowing you truly understood us.</p>
-              <p className="italic opacity-80 pt-4">You made us feel seen, not just as students, but as people.</p>
+              <p>
+                From neural networks to backpropagation, you made even the most complicated concepts feel understandable.
+              </p>
+              <p>
+                But beyond algorithms, models, and loss functions, you taught us something more valuable — the patience to learn, the courage to make mistakes, and the curiosity to keep going.
+              </p>
+              <p className="text-[#fafaf9] font-medium italic pt-4 text-2xl md:text-3xl border-l-4 border-[#d4af37] pl-6 my-6">
+                Thank you, Murali Sir, for helping us train not just our models, but our minds. 🧠✨
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Moments We Remember */}
-        <section className="scroll-section min-h-screen flex flex-col justify-center items-center px-6 py-20">
-          <h2 className="text-4xl md:text-5xl text-[#d4af37] mb-16 font-bold">Moments We Remember</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-5xl">
-            {[1, 2].map((i) => (
-              <div key={i} className="aspect-square md:aspect-auto md:h-96 bg-[#292524]/60 rounded-xl border border-[#44403c]/30 flex items-center justify-center overflow-hidden group shadow-lg p-4">
-                <div className="w-full h-full bg-[#1c1917] rounded-lg border border-[#3e3a37] flex items-center justify-center relative">
-                  <div className="text-[#a8a29e] opacity-70 group-hover:scale-105 transition-transform duration-[2s] ease-out">
-                    {data?.placeholders.photo}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* Interactive Quiz Section */}
+        <section className="scroll-section py-16">
+          <MuraliQuiz />
         </section>
 
-        {/* Words From Students */}
-        <section className="scroll-section min-h-screen flex items-center justify-center px-6 py-20">
-          <div className="max-w-5xl w-full">
-            <h2 className="text-4xl md:text-5xl text-[#d4af37] mb-16 font-bold text-center">Words of Comfort</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {data?.placeholders.memories.map((memory, i) => (
-                <div key={i} className="bg-gradient-to-br from-[#292524]/80 to-[#1c1917]/80 p-10 rounded-2xl border border-[#d4af37]/20 shadow-xl relative">
-                  <div className="absolute -top-4 -left-2 text-6xl text-[#d4af37] opacity-20 font-serif">"</div>
-                  <p className="italic text-lg md:text-xl mb-6 text-[#d6d3d1] relative z-10 leading-relaxed font-light">{memory}</p>
-                  <p className="text-[#d4af37]/80 text-sm md:text-base text-right tracking-widest font-sans">— Class of 2026</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Final Thank You */}
+        {/* Final Thank You & Tribute Marquee */}
         <section className="scroll-section min-h-[80vh] flex flex-col items-center justify-center px-6 text-center pb-20">
           <TributeMarquee />
-          <h2 className="text-5xl md:text-7xl font-sans font-bold text-[#fafaf9] mb-10 tracking-wide mt-8">Happy Teachers' Day</h2>
-          <p className="text-2xl md:text-4xl text-[#d4af37] italic mb-16 max-w-3xl leading-relaxed">
-            {data?.placeholders.appreciation}
+          <h2 className="text-5xl md:text-7xl font-sans font-bold text-[#fafaf9] mb-8 tracking-wide mt-8">
+            Happy Teachers' Day
+          </h2>
+          <p className="text-2xl md:text-4xl text-[#d4af37] italic mb-12 max-w-3xl leading-relaxed">
+            “Thank you for making our brains work overtime… and somehow making us enjoy it.” 🧠😂
           </p>
-          <p className="text-xl md:text-2xl text-[#d6d3d1] mb-12 font-light tracking-wide">"Thank you for understanding us."</p>
+          <p className="text-xl md:text-2xl text-[#d6d3d1] mb-12 font-light tracking-wide">
+            — Murali Sir ❤️
+          </p>
           
-          <div className="mt-32 text-xs tracking-[0.3em] text-[#78716c] uppercase font-sans">
-            Teachers' Day 2026
+          <div className="mt-20 text-xs tracking-[0.3em] text-[#78716c] uppercase font-sans">
+            Teachers' Day 2026 • Dedicated to Mr. P. Murali
           </div>
         </section>
 
@@ -138,3 +134,4 @@ const Murali: React.FC = () => {
 };
 
 export default Murali;
+

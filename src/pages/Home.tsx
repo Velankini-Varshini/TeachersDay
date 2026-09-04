@@ -131,7 +131,7 @@ const Home: React.FC = () => {
 
         {/* Recognition State */}
         <div ref={recognitionRef} className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0">
-          <p className="text-green-400 tracking-[0.5em] uppercase text-sm mb-6 font-bold animate-pulse">Mentor Found</p>
+          <p className="text-green-400 tracking-[0.5em] uppercase text-sm mb-6 font-bold animate-pulse">Our Role Model Found</p>
           <h2 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white">{matchedTeacher?.fullName}</h2>
           <p className="text-xl italic opacity-70 font-serif">Preparing your world...</p>
         </div>
