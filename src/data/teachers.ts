@@ -131,6 +131,25 @@ export const teachers: TeacherData[] = [
       photo: "[Add teacher photograph]",
       appreciation: "Thank you for keeping us disciplined, guiding us, and being the best HOD we could ever ask for. ✨"
     }
+  },
+  {
+    id: "sphoorthi",
+    name: "Sphoorthi",
+    fullName: "Mrs. Sphoorthi",
+    theme: "mentor",
+    title: "Our Sweetest Guide and Former Class Teacher",
+    quote: "You taught us wonderfully, and we truly wish we had you back as our class teacher again!",
+    route: "/sphoorthi",
+    aliases: ["sphoorthi", "sphoorthimam", "sphoorthimadam", "mrssphoorthi", "sphoorthimaam", "spoorthi"],
+    placeholders: {
+      message: "From teaching us beautifully to being the sweetest class teacher, your guidance and support mean the world to us. We truly miss having you around!",
+      memories: [
+        "From teaching us beautifully to being the sweetest class teacher.",
+        "Your guidance and support mean the world to us, and we miss you!"
+      ],
+      photo: "[Add teacher photograph]",
+      appreciation: "Thank you for being the sweetest guide and the best class teacher we could ask for! 🌟"
+    }
   }
 ];
 
