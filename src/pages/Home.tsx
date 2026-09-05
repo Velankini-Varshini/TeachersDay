@@ -104,7 +104,7 @@ const Home: React.FC = () => {
         <h1 ref={titleRef} className="text-5xl md:text-7xl font-ncl-gasdrifo font-bold mb-6 tracking-widest leading-tight">
           HAPPY TEACHERS' DAY
         </h1>
-        <p ref={subtitleRef} className="text-xl md:text-3xl mb-12 italic opacity-80 font-serif">
+        <p ref={subtitleRef} className="text-xl md:text-3xl mb-12 font-thequironax italic opacity-80 font-serif">
           "Every journey has a few people who make it memorable."
         </p>
 

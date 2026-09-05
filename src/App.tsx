@@ -5,7 +5,7 @@ import Prabhakar from './pages/Prabhakar';
 import Anjali from './pages/Anjali';
 import NagaSirisha from './pages/NagaSirisha';
 import Sindhuja from './pages/Sindhuja';
-
+import GeethaReddy from './pages/GeethaReddy';
 function App() {
   return (
     <Router>
@@ -16,6 +16,7 @@ function App() {
         <Route path="/anjali" element={<Anjali />} />
         <Route path="/naga-sirisha" element={<NagaSirisha />} />
         <Route path="/sindhuja" element={<Sindhuja />} />
+        <Route path="/geetha-reddy" element={<GeethaReddy />} />
       </Routes>
     </Router>
   );

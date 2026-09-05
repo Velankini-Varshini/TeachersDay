@@ -42,6 +42,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'thequironax';
+  src: url('/fonts/THEQUIRONAX-Demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   body {
     @apply bg-zinc-950 text-white font-sans overflow-x-hidden;
@@ -98,5 +105,8 @@
   }
   .font-ncl-gasdrifo {
     font-family: 'NCLGasdrifo', sans-serif;
+  }
+  .font-thequironax {
+    font-family: 'thequironax', sans-serif;
   }
 }

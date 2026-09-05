@@ -104,10 +104,32 @@ export const teachers: TeacherData[] = [
     route: "/sindhuja",
     aliases: ["sindhuja", "sindhujamadam", "sindhujamaam", "mrssindhuja"],
     placeholders: {
-      message: "[Add teacher message]",
-      memories: ["[Add student memories]"],
+      message: "From virtualization to scalable architectures, you made Cloud Computing an exciting journey. You taught us not just how to deploy applications, but how to design for the future.",
+      memories: [
+        "From virtualization to scalable architectures, you made Cloud Computing an exciting journey.",
+        "You taught us not just how to deploy applications, but how to design for the future."
+      ],
       photo: "[Add teacher photograph]",
-      appreciation: "[Add appreciation quote]"
+      appreciation: "Thank you for lifting our knowledge to the clouds and making Cloud Computing our favorite subject! ☁️🚀"
+    }
+  },
+  {
+    id: "geetha-reddy",
+    name: "Geetha Reddy",
+    fullName: "Mrs. Geetha Reddy",
+    theme: "architect",
+    title: "The Best HOD We Could Ever Have",
+    quote: "You didn't just enforce discipline… you guided us with care and pushed us to be the best versions of ourselves.",
+    route: "/geetha-reddy",
+    aliases: ["geetha", "geethareddy", "geethamam", "hod", "hodmam", "geethareddymam"],
+    placeholders: {
+      message: "From making sure we attend our classes to ensuring we excel in our academics, you have always been the pillar of strength for our department.\n\nStrict on the outside but incredibly caring on the inside, you truly are the best HOD we could ever ask for.",
+      memories: [
+        "From making sure we attend our classes to ensuring we excel in our academics, you have always been the pillar of strength for our department.",
+        "Strict on the outside but incredibly caring on the inside, you truly are the best HOD we could ever ask for."
+      ],
+      photo: "[Add teacher photograph]",
+      appreciation: "Thank you for keeping us disciplined, guiding us, and being the best HOD we could ever ask for. ✨"
     }
   }
 ];
